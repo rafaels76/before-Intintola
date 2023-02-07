@@ -1,10 +1,10 @@
 var map = L.map("map").setView([0, 09], 2);
 var currentVisibility = '';
-const issIconDayLight = L.icon({iconUrl: "assets/img/iss.png", iconSize: [100, 100], iconAnchor: [50, 50]});
-const issIconEclipsed = L.icon({iconUrl: "assets/img/iss-e.png", iconSize: [100, 100], iconAnchor: [50, 50] });
+const issIconDayLight = L.icon({iconUrl: "assets/img/iss.png", iconSize: [100, 100], iconAnchor: [50, 25]});
+const issIconEclipsed = L.icon({iconUrl: "assets/img/iss-e.png", iconSize: [100, 100], iconAnchor: [50, 25] });
 const issRadious = L.circle([0,0], 2200e3, {color: "#19630a", opacity: 0.3, weight:1, fillColor: "#19630a", fillOpacity: 0.1}).addTo(map); 
 const issMarker = L.marker([0, 0], { icon: issIconDayLight }).addTo(map);
-const urlISS = `https://api.wheretheiss.at/v1/satellites/25544`;
+const urlISS = `https://api.wheretheiss.at/v1/satellites/25544?units=miles`;
 const urlLeaflet = "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}";
 let firstTime = true;
 
