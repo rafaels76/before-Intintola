@@ -1,7 +1,7 @@
 var map = L.map("map").setView([0, 09], 2);
 var currentVisibility = '';
-const issIconDayLight = L.icon({iconUrl: "assets/img/iss.png", iconSize: [100, 100], iconAnchor: [50, 25]});
-const issIconEclipsed = L.icon({iconUrl: "assets/img/iss-e.png", iconSize: [100, 100], iconAnchor: [50, 25] });
+const issIconDayLight = L.icon({iconUrl: "assets/img/iss.png", iconSize: [100, 100], iconAnchor: [50, 75]});
+const issIconEclipsed = L.icon({iconUrl: "assets/img/iss-e.png", iconSize: [100, 100], iconAnchor: [50, 75] });
 const issRadious = L.circle([0,0], 2200e3, {color: "#19630a", opacity: 0.3, weight:1, fillColor: "#19630a", fillOpacity: 0.1}).addTo(map); 
 const issMarker = L.marker([0, 0], { icon: issIconDayLight }).addTo(map);
 const urlISS = `https://api.wheretheiss.at/v1/satellites/25544?units=miles`;
@@ -15,7 +15,7 @@ L.tileLayer(
     urlLeaflet,
     {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-      maxZoom: 18,
+      maxZoom: 26,
       id: "mapbox/streets-v11",
       tileSize: 512,
       zoomOffset: -1,
